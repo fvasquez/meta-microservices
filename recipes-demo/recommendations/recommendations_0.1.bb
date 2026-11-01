@@ -6,13 +6,13 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 SRC_URI = "git://github.com/fvasquez/python-microservices.git;protocol=https;branch=main"
 SRCREV = "f83a51da9f826932b929d2e36c5a039b8c6598d2"
 
-RDEPENDS_${PN} = "python3-core"
+RDEPENDS:${PN} = "python3-core"
 
-S = "${WORKDIR}/git"
+S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 
 do_install () {
    install -d ${D}${bindir}
    install -m 0755 ${S}/recommendations/*.py ${D}${bindir}
 }
 
-FILES_${PN} += "${bindir}/*.py"
+FILES:${PN} += "${bindir}/*.py"

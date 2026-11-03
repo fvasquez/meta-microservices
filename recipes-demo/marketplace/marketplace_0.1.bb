@@ -21,7 +21,7 @@ do_compile () {
 
 do_install () {
    install -d ${D}/services/marketplace/templates
-   install -m 0755 ${S}/marketplace/*.py ${D}/services/marketplace
+   install -m 0755 ${S}/marketplace/marketplace.py ${D}/services/marketplace
    install -m 0644 ${B}/recommendations_pb2.py ${B}/recommendations_pb2_grpc.py ${D}/services/marketplace
    install -m 0644 ${S}/marketplace/templates/homepage.html ${D}/services/marketplace/templates
 }

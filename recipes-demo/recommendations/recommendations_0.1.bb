@@ -21,7 +21,7 @@ do_compile () {
 
 do_install () {
    install -d ${D}/services/recommendations
-   install -m 0755 ${S}/recommendations/*.py ${D}/services/recommendations
+   install -m 0755 ${S}/recommendations/recommendations.py ${D}/services/recommendations
    install -m 0644 ${B}/recommendations_pb2.py ${B}/recommendations_pb2_grpc.py ${D}/services/recommendations
 }
 

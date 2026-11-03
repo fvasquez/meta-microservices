@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 
 require recipes-extended/images/container-app-base.bb
 
-CONTAINER_APP = "marketplace"
+CONTAINER_APP = "marketplace-app"
 CONTAINER_APP_CMD = "python3 -m flask run --host=0.0.0.0"
 
 OCI_IMAGE_CMD = ""

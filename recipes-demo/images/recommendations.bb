@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 
 require recipes-extended/images/container-app-base.bb
 
-CONTAINER_APP = "recommendations"
+CONTAINER_APP = "recommendations-app"
 CONTAINER_APP_CMD = "python3 recommendations.py"
 
 OCI_IMAGE_CMD = ""

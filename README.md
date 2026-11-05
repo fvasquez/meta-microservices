@@ -1,7 +1,5 @@
 # meta-microservices
 
-Yocto demo layer for Python gRPC microservices.
-
 This layer accompanies my talk
 [Building Secure Container Images for the Cloud with Yocto](https://media.ccc.de/v/all-systems-go-2024-267-building-secure-container-images-for-the-cloud-with-yocto)
 from All Systems Go! 2024.
@@ -23,6 +21,13 @@ Docker host image, and a systemd unit starts them with Docker Compose at boot.
                     ├─ marketplace      Flask, :5000 ─┐
                     └─ recommendations  gRPC,  :443 ◄─┘ mTLS
 ```
+
+## Disclaimer
+
+`microservices-certs` creates its CA and keys at build time, and the private
+keys (`server.key`, `client.key`) are installed in the container images. This
+setup is for demos only. Do not use these images or certificates in
+production.
 
 ## Dependencies
 
@@ -205,13 +210,6 @@ recommendations over gRPC with mTLS:
     <li>The Hound of the Baskervilles</li>
 </ul>
 ```
-
-## Security note
-
-`microservices-certs` creates its CA and keys at build time, and the private
-keys (`server.key`, `client.key`) are installed in the container images. This
-setup is for demos only. Do not use these images or certificates in
-production.
 
 ## License
 

@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 SRC_URI = "git://github.com/fvasquez/python-microservices.git;protocol=https;branch=main"
 SRCREV = "f83a51da9f826932b929d2e36c5a039b8c6598d2"
 
-RDEPENDS:${PN} = "python3-core python3-grpcio python3-protobuf recommendations-certs"
+RDEPENDS:${PN} = "python3-core python3-grpcio python3-grpc-interceptor python3-protobuf recommendations-certs"
 
 S = "${UNPACKDIR}/${BB_GIT_DEFAULT_DESTSUFFIX}"
 
